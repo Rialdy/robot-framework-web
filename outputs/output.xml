@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20221206 21:35:02.862" rpa="false" schemaversion="3">
+<suite id="s1" name="Login Suite" source="/Users/rialdyperdana/Documents/Iseng/robotFramework/test_suites/login_suite.robot">
+<test id="s1-t1" name="Scenario: User login with valid credential" line="10">
+<kw name="Open Home Page" library="resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${home_page}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221206 21:35:02.945" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20221206 21:35:02.944" endtime="20221206 21:35:05.446"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221206 21:35:05.446" endtime="20221206 21:35:05.847"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:02.944" endtime="20221206 21:35:05.848"/>
+</kw>
+<kw name="Given User verify page element in home page" library="login_step">
+<kw name="Home Page Displayed" library="login_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${icon_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:05.848" endtime="20221206 21:35:05.869"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${icon_login}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:05.879" level="INFO">Element '//*[@class="login_logo"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:05.869" endtime="20221206 21:35:05.879"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${username_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:05.879" endtime="20221206 21:35:05.891"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${username_field}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:05.898" level="INFO">Element '//*[@placeholder="Username"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:05.891" endtime="20221206 21:35:05.898"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:05.898" endtime="20221206 21:35:05.907"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:05.913" level="INFO">Element '//*[@placeholder="Password"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:05.907" endtime="20221206 21:35:05.913"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:05.848" endtime="20221206 21:35:05.913"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:05.848" endtime="20221206 21:35:05.913"/>
+</kw>
+<kw name="Then User input username and password &quot;${valid_username}&quot; &quot;${valid_password}&quot;" library="login_step" sourcename="User input username and password &quot;${username}&quot; &quot;${password}&quot;">
+<kw name="Input Username" library="login_page">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:05.915" level="INFO">Typing text 'standard_user' into text field '//*[@placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20221206 21:35:05.915" endtime="20221206 21:35:05.978"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:05.915" endtime="20221206 21:35:05.978"/>
+</kw>
+<kw name="Input Password" library="login_page">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:05.979" level="INFO">Typing text 'secret_sauce' into text field '//*[@placeholder="Password"]'.</msg>
+<status status="PASS" starttime="20221206 21:35:05.979" endtime="20221206 21:35:06.013"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:05.978" endtime="20221206 21:35:06.013"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:05.913" endtime="20221206 21:35:06.013"/>
+</kw>
+<kw name="Then User click login button" library="login_step">
+<kw name="Click Login button" library="login_page">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:06.013" level="INFO">Clicking button '//*[@name="login-button"]'.</msg>
+<status status="PASS" starttime="20221206 21:35:06.013" endtime="20221206 21:35:06.054"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:06.013" endtime="20221206 21:35:06.054"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:06.013" endtime="20221206 21:35:06.054"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221206 21:35:06.055" endtime="20221206 21:35:06.118"/>
+</kw>
+<tag>Smoke</tag>
+<tag>valid_credential</tag>
+<status status="PASS" starttime="20221206 21:35:02.944" endtime="20221206 21:35:06.118"/>
+</test>
+<test id="s1-t2" name="Scenario: User login with invalid credential" line="16">
+<kw name="Open Home Page" library="resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${home_page}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221206 21:35:06.119" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20221206 21:35:06.119" endtime="20221206 21:35:07.900"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221206 21:35:07.900" endtime="20221206 21:35:08.325"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:06.119" endtime="20221206 21:35:08.325"/>
+</kw>
+<kw name="Given User verify page element in home page" library="login_step">
+<kw name="Home Page Displayed" library="login_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${icon_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:08.326" endtime="20221206 21:35:08.343"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${icon_login}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:08.354" level="INFO">Element '//*[@class="login_logo"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:08.344" endtime="20221206 21:35:08.354"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${username_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:08.354" endtime="20221206 21:35:08.363"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${username_field}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:08.374" level="INFO">Element '//*[@placeholder="Username"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:08.363" endtime="20221206 21:35:08.374"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:08.374" endtime="20221206 21:35:08.383"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:08.389" level="INFO">Element '//*[@placeholder="Password"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:08.383" endtime="20221206 21:35:08.389"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:08.326" endtime="20221206 21:35:08.389"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:08.326" endtime="20221206 21:35:08.389"/>
+</kw>
+<kw name="Then User input username and password &quot;${invalid_username}&quot; &quot;${invalid_password}&quot;" library="login_step" sourcename="User input username and password &quot;${username}&quot; &quot;${password}&quot;">
+<kw name="Input Username" library="login_page">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:08.390" level="INFO">Typing text 'standarduser' into text field '//*[@placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20221206 21:35:08.390" endtime="20221206 21:35:08.456"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:08.390" endtime="20221206 21:35:08.456"/>
+</kw>
+<kw name="Input Password" library="login_page">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:08.457" level="INFO">Typing text 'secretsauce' into text field '//*[@placeholder="Password"]'.</msg>
+<status status="PASS" starttime="20221206 21:35:08.457" endtime="20221206 21:35:08.490"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:08.456" endtime="20221206 21:35:08.490"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:08.389" endtime="20221206 21:35:08.490"/>
+</kw>
+<kw name="Then User click login button" library="login_step">
+<kw name="Click Login button" library="login_page">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:08.490" level="INFO">Clicking button '//*[@name="login-button"]'.</msg>
+<status status="PASS" starttime="20221206 21:35:08.490" endtime="20221206 21:35:08.514"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:08.490" endtime="20221206 21:35:08.514"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:08.490" endtime="20221206 21:35:08.514"/>
+</kw>
+<kw name="Then User verify error message &quot;${error_text_user_and_pass}&quot;" library="login_step" sourcename="User verify error message &quot;${error_message}&quot;">
+<kw name="Verify Error Message" library="login_page">
+<arg>${error_message}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login_error_text}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:08.515" endtime="20221206 21:35:08.524"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${login_error_text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:08.529" level="INFO">Element '//*[@data-test="error"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:08.524" endtime="20221206 21:35:08.529"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actualResult}</var>
+<arg>${login_error_text}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:08.538" level="INFO">${actualResult} = Epic sadface: Username and password do not match any user in this service</msg>
+<status status="PASS" starttime="20221206 21:35:08.529" endtime="20221206 21:35:08.538"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${login_error_text}</arg>
+<arg>${error_message}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221206 21:35:08.539" level="INFO">Verifying element '//*[@data-test="error"]' contains exact text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<status status="PASS" starttime="20221206 21:35:08.538" endtime="20221206 21:35:08.544"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:08.515" endtime="20221206 21:35:08.544"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:08.514" endtime="20221206 21:35:08.544"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221206 21:35:08.544" endtime="20221206 21:35:08.607"/>
+</kw>
+<tag>invalid_credential</tag>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20221206 21:35:06.118" endtime="20221206 21:35:08.607"/>
+</test>
+<test id="s1-t3" name="Scenario: User login with empty password" line="23">
+<kw name="Open Home Page" library="resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${home_page}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221206 21:35:08.608" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20221206 21:35:08.608" endtime="20221206 21:35:10.392"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221206 21:35:10.393" endtime="20221206 21:35:10.794"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:08.608" endtime="20221206 21:35:10.794"/>
+</kw>
+<kw name="Given User verify page element in home page" library="login_step">
+<kw name="Home Page Displayed" library="login_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${icon_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:10.795" endtime="20221206 21:35:10.813"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${icon_login}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:10.823" level="INFO">Element '//*[@class="login_logo"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:10.813" endtime="20221206 21:35:10.823"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${username_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:10.823" endtime="20221206 21:35:10.833"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${username_field}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:10.840" level="INFO">Element '//*[@placeholder="Username"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:10.833" endtime="20221206 21:35:10.840"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:10.840" endtime="20221206 21:35:10.849"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:10.855" level="INFO">Element '//*[@placeholder="Password"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:10.849" endtime="20221206 21:35:10.855"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:10.795" endtime="20221206 21:35:10.855"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:10.794" endtime="20221206 21:35:10.855"/>
+</kw>
+<kw name="Then User input username &quot;${valid_username}&quot;" library="login_step" sourcename="User input username &quot;${username}&quot;">
+<kw name="Input Username" library="login_page">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:10.856" level="INFO">Typing text 'standard_user' into text field '//*[@placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20221206 21:35:10.856" endtime="20221206 21:35:10.910"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:10.855" endtime="20221206 21:35:10.910"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:10.855" endtime="20221206 21:35:10.910"/>
+</kw>
+<kw name="Then User click login button" library="login_step">
+<kw name="Click Login button" library="login_page">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:10.911" level="INFO">Clicking button '//*[@name="login-button"]'.</msg>
+<status status="PASS" starttime="20221206 21:35:10.911" endtime="20221206 21:35:10.935"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:10.910" endtime="20221206 21:35:10.935"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:10.910" endtime="20221206 21:35:10.935"/>
+</kw>
+<kw name="Then User verify error message &quot;${error_text_password}&quot;" library="login_step" sourcename="User verify error message &quot;${error_message}&quot;">
+<kw name="Verify Error Message" library="login_page">
+<arg>${error_message}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login_error_text}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:10.936" endtime="20221206 21:35:10.944"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${login_error_text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:10.950" level="INFO">Element '//*[@data-test="error"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:10.944" endtime="20221206 21:35:10.950"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actualResult}</var>
+<arg>${login_error_text}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:10.958" level="INFO">${actualResult} = Epic sadface: Password is required</msg>
+<status status="PASS" starttime="20221206 21:35:10.950" endtime="20221206 21:35:10.958"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${login_error_text}</arg>
+<arg>${error_message}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221206 21:35:10.958" level="INFO">Verifying element '//*[@data-test="error"]' contains exact text 'Epic sadface: Password is required'.</msg>
+<status status="PASS" starttime="20221206 21:35:10.958" endtime="20221206 21:35:10.964"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:10.935" endtime="20221206 21:35:10.964"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:10.935" endtime="20221206 21:35:10.964"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221206 21:35:10.964" endtime="20221206 21:35:11.028"/>
+</kw>
+<tag>empty_password</tag>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20221206 21:35:08.607" endtime="20221206 21:35:11.028"/>
+</test>
+<test id="s1-t4" name="Scenario: User login with empty username" line="30">
+<kw name="Open Home Page" library="resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${home_page}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221206 21:35:11.029" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20221206 21:35:11.029" endtime="20221206 21:35:12.839"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221206 21:35:12.839" endtime="20221206 21:35:13.243"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:11.029" endtime="20221206 21:35:13.244"/>
+</kw>
+<kw name="Given User verify page element in home page" library="login_step">
+<kw name="Home Page Displayed" library="login_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${icon_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:13.244" endtime="20221206 21:35:13.261"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${icon_login}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:13.271" level="INFO">Element '//*[@class="login_logo"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:13.261" endtime="20221206 21:35:13.271"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${username_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:13.271" endtime="20221206 21:35:13.281"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${username_field}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:13.287" level="INFO">Element '//*[@placeholder="Username"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:13.281" endtime="20221206 21:35:13.287"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:13.287" endtime="20221206 21:35:13.296"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:13.302" level="INFO">Element '//*[@placeholder="Password"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:13.296" endtime="20221206 21:35:13.302"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:13.244" endtime="20221206 21:35:13.302"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:13.244" endtime="20221206 21:35:13.302"/>
+</kw>
+<kw name="Then User input password &quot;${valid_password}&quot;" library="login_step" sourcename="User input password &quot;${password}&quot;">
+<kw name="Input Password" library="login_page">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:13.302" level="INFO">Typing text 'secret_sauce' into text field '//*[@placeholder="Password"]'.</msg>
+<status status="PASS" starttime="20221206 21:35:13.302" endtime="20221206 21:35:13.357"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:13.302" endtime="20221206 21:35:13.357"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:13.302" endtime="20221206 21:35:13.357"/>
+</kw>
+<kw name="Then User click login button" library="login_step">
+<kw name="Click Login button" library="login_page">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:13.357" level="INFO">Clicking button '//*[@name="login-button"]'.</msg>
+<status status="PASS" starttime="20221206 21:35:13.357" endtime="20221206 21:35:13.380"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:13.357" endtime="20221206 21:35:13.380"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:13.357" endtime="20221206 21:35:13.380"/>
+</kw>
+<kw name="Then User verify error message &quot;${error_text_username}&quot;" library="login_step" sourcename="User verify error message &quot;${error_message}&quot;">
+<kw name="Verify Error Message" library="login_page">
+<arg>${error_message}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login_error_text}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:13.381" endtime="20221206 21:35:13.390"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${login_error_text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:13.395" level="INFO">Element '//*[@data-test="error"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:13.390" endtime="20221206 21:35:13.395"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actualResult}</var>
+<arg>${login_error_text}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:13.403" level="INFO">${actualResult} = Epic sadface: Username is required</msg>
+<status status="PASS" starttime="20221206 21:35:13.396" endtime="20221206 21:35:13.404"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${login_error_text}</arg>
+<arg>${error_message}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221206 21:35:13.404" level="INFO">Verifying element '//*[@data-test="error"]' contains exact text 'Epic sadface: Username is required'.</msg>
+<status status="PASS" starttime="20221206 21:35:13.404" endtime="20221206 21:35:13.409"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:13.381" endtime="20221206 21:35:13.409"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:13.380" endtime="20221206 21:35:13.409"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221206 21:35:13.409" endtime="20221206 21:35:13.472"/>
+</kw>
+<tag>empty_username</tag>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20221206 21:35:11.028" endtime="20221206 21:35:13.472"/>
+</test>
+<test id="s1-t5" name="Scenario: User Login with empty credential" line="37">
+<kw name="Open Home Page" library="resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${home_page}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221206 21:35:13.473" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20221206 21:35:13.473" endtime="20221206 21:35:15.230"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221206 21:35:15.230" endtime="20221206 21:35:15.638"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:13.473" endtime="20221206 21:35:15.638"/>
+</kw>
+<kw name="Given User verify page element in home page" library="login_step">
+<kw name="Home Page Displayed" library="login_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${icon_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:15.639" endtime="20221206 21:35:15.655"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${icon_login}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:15.665" level="INFO">Element '//*[@class="login_logo"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:15.656" endtime="20221206 21:35:15.665"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${username_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:15.665" endtime="20221206 21:35:15.675"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${username_field}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:15.681" level="INFO">Element '//*[@placeholder="Username"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:15.675" endtime="20221206 21:35:15.681"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:15.682" endtime="20221206 21:35:15.690"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:15.696" level="INFO">Element '//*[@placeholder="Password"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:15.690" endtime="20221206 21:35:15.696"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:15.639" endtime="20221206 21:35:15.696"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:15.639" endtime="20221206 21:35:15.696"/>
+</kw>
+<kw name="Then User click login button" library="login_step">
+<kw name="Click Login button" library="login_page">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:15.697" level="INFO">Clicking button '//*[@name="login-button"]'.</msg>
+<status status="PASS" starttime="20221206 21:35:15.697" endtime="20221206 21:35:15.720"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:15.696" endtime="20221206 21:35:15.720"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:15.696" endtime="20221206 21:35:15.721"/>
+</kw>
+<kw name="Then User verify error message &quot;${error_text_username}&quot;" library="login_step" sourcename="User verify error message &quot;${error_message}&quot;">
+<kw name="Verify Error Message" library="login_page">
+<arg>${error_message}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login_error_text}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221206 21:35:15.721" endtime="20221206 21:35:15.732"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${login_error_text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221206 21:35:15.743" level="INFO">Element '//*[@data-test="error"]' is displayed.</msg>
+<status status="PASS" starttime="20221206 21:35:15.733" endtime="20221206 21:35:15.743"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actualResult}</var>
+<arg>${login_error_text}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221206 21:35:15.754" level="INFO">${actualResult} = Epic sadface: Username is required</msg>
+<status status="PASS" starttime="20221206 21:35:15.743" endtime="20221206 21:35:15.754"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${login_error_text}</arg>
+<arg>${error_message}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221206 21:35:15.754" level="INFO">Verifying element '//*[@data-test="error"]' contains exact text 'Epic sadface: Username is required'.</msg>
+<status status="PASS" starttime="20221206 21:35:15.754" endtime="20221206 21:35:15.761"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:15.721" endtime="20221206 21:35:15.761"/>
+</kw>
+<status status="PASS" starttime="20221206 21:35:15.721" endtime="20221206 21:35:15.761"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221206 21:35:15.761" endtime="20221206 21:35:15.824"/>
+</kw>
+<tag>empty_credential</tag>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20221206 21:35:13.472" endtime="20221206 21:35:15.824"/>
+</test>
+<status status="PASS" starttime="20221206 21:35:02.862" endtime="20221206 21:35:15.825"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">empty_credential</stat>
+<stat pass="1" fail="0" skip="0">empty_password</stat>
+<stat pass="1" fail="0" skip="0">empty_username</stat>
+<stat pass="1" fail="0" skip="0">invalid_credential</stat>
+<stat pass="5" fail="0" skip="0">Smoke</stat>
+<stat pass="1" fail="0" skip="0">valid_credential</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Login Suite">Login Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
